@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class BooksServiceFactory {
     public BooksService newInstance() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://api.openweathermap.org/")
+                .baseUrl("http://api.nytimes.com/svc/books/{version}/reviews/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .build();

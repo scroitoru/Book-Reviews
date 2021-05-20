@@ -12,9 +12,9 @@
          <children>
             <HBox prefHeight="87.0" prefWidth="600.0">
                <children>
-                  <ImageView fitHeight="93.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="92.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../OneDrive/Documents/Spring%202021/Comp%20Methodology/Final/image-removebg-preview%20(1).png" />
+                        <Image url="pictures/books.png" />
                      </image>
                      <HBox.margin>
                         <Insets left="8.0" top="12.0" />
@@ -25,7 +25,7 @@
                         <Font name="Bookman Old Style Bold" size="43.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="12.0" />
+                        <Insets left="6.0" />
                      </HBox.margin>
                   </Label>
                </children></HBox>
@@ -33,22 +33,25 @@
                <font>
                   <Font name="Segoe Print Bold" size="13.0" />
                </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </Label>
             <HBox prefHeight="49.0" prefWidth="600.0">
                <children>
                   <Label alignment="CENTER_RIGHT" prefHeight="75.0" prefWidth="163.0" text="BOOK TITLE:" textFill="#84966f">
                      <font>
-                        <Font name="Lucida Console" size="20.0" />
+                        <Font name="Consolas Bold" size="22.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="bookTitle" alignment="CENTER" prefHeight="39.0" prefWidth="427.0">
+                  <TextField fx:id="bookTitle" alignment="TOP_LEFT" prefHeight="39.0" prefWidth="427.0">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </TextField>
                </children>
             </HBox>
-            <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="83.0" text="Submit" textFill="#284159">
+            <Button fx:id="submit" onAction="#onSubmit" alignment="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="83.0" text="Submit" textFill="#284159">
                <VBox.margin>
                   <Insets left="64.0" right="64.0" />
                </VBox.margin>
@@ -56,7 +59,7 @@
                   <Font name="Comic Sans MS Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Label alignment="TOP_CENTER" prefHeight="214.0" prefWidth="600.0" text="Please enter a book title and click &quot;Submit&quot; to see the review" textFill="#284159">
+            <Label fx:id="review" alignment="TOP_CENTER" prefHeight="214.0" prefWidth="600.0" text="Please enter a book title and click &quot;Submit&quot; to see the review" textFill="#284159">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>

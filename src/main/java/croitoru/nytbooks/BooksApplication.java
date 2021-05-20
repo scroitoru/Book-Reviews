@@ -21,7 +21,7 @@ public class BooksApplication extends Application {
                 + "-fx-border-color: #ceaa31;"
                 + "-fx-border-width: 5;");
 
-        Scene scene = new Scene(root, 600, 300);
+        Scene scene = new Scene(root, 600, 400);
 
         stage.setTitle("NYT Book Reviews");
         stage.setScene(scene);
