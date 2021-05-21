@@ -32,8 +32,12 @@ public class BooksController {
     }
 
     private void getNytReview(BooksFeed booksFeed) {
+        String thisAuthor = booksFeed.results.get(0).book_author;
+        String thisTitle = booksFeed.results.get(0).book_title;
+        String thisSummary = booksFeed.results.get(0).summary;
+        String finalReview = thisAuthor +"\n"+ thisTitle +"\n" + thisSummary;
         Platform.runLater(() -> {
-            review.setText(booksFeed.results.toString());
+            review.setText(finalReview);
         });
     }
 
