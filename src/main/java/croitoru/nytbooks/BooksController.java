@@ -2,21 +2,18 @@ package croitoru.nytbooks;
 
 import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import javax.swing.*;
-
 public class BooksController {
     @FXML
-    Label reviews;
+    Label review;
     @FXML
     TextField bookTitle;
-    @FXML
-    Button button;
+
     BooksService service;
 
     public BooksController(BooksService service){
@@ -35,7 +32,9 @@ public class BooksController {
     }
 
     private void getNytReview(BooksFeed booksFeed) {
-        reviews.setText(booksFeed.results.toString());
+        Platform.runLater(() -> {
+            review.setText(booksFeed.results.toString());
+        });
     }
 
     private void onError(Throwable throwable) {

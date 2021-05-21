@@ -1,6 +1,5 @@
 package croitoru.nytbooks;
 
-import java.util.Date;
 import java.util.List;
 
 public class BooksFeed {
