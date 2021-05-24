@@ -15,11 +15,12 @@ public class BooksServiceTest {
         BooksService service = factory.newInstance();
 
         //when
-        BooksFeed feed = service.getBookReview("Pride and Prejudice").blockingGet();
+        BooksFeed feed = service.getBookReview("1Q84").blockingGet();
 
         //then
         assertNotNull(feed);
         assertNotNull(feed.results);
+        assertFalse(feed.results.isEmpty());
 
 
     }
