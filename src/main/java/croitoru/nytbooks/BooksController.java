@@ -59,7 +59,7 @@ public class BooksController {
                 .subscribe(this::getNytReview, this::onError);
     }
 
-    private void getNytReview(BooksFeed feed) {
+    public void getNytReview(BooksFeed feed) {
         Platform.runLater(() -> {
             table.getItems().setAll(feed.results);
             table.refresh();
