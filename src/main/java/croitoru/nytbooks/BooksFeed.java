@@ -14,8 +14,7 @@ public class BooksFeed {
         String summary;
 
         public Hyperlink getUrl() {
-            Hyperlink hyperlink = new Hyperlink(url);
-            return hyperlink;
+            return new Hyperlink(url);
         }
 
         public String getBook_title() {
