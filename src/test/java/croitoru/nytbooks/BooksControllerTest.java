@@ -2,16 +2,11 @@ package croitoru.nytbooks;
 
 import io.reactivex.rxjava3.core.Single;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mockito.Mockito;
-
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class BooksControllerTest {
